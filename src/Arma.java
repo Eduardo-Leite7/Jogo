@@ -15,7 +15,7 @@ public abstract class Arma {
     public Arma(String nome, int ataque) {
         this.nome = nome;
         this.ataque = ataque;
-        this.chance = 100;
+        this.chance = 99;
     }
 
     public void mensagem(){
