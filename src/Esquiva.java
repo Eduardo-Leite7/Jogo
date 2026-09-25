@@ -12,6 +12,7 @@ public class Esquiva extends Defesa{
         Random rd = new Random();
         int sorteio = rd.nextInt(100);
         if (sorteio < this.chance) {
+            System.out.println("Esquivou!!!");
             return 0;
         }
         return dano;

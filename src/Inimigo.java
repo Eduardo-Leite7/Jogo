@@ -1,7 +1,7 @@
 public abstract class Inimigo extends Criatura{
 
     private int ataque;
-    Defesa defesa = new Escudo(12);
+    private Defesa defesa = new Esquiva(50);
 
     public Inimigo(String nome, int vida, int ataque) {
         super(nome, vida);
