@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Esquiva extends Defesa{
     private int chance;
 
@@ -7,7 +9,11 @@ public class Esquiva extends Defesa{
 
     @Override
     public int danoReduzido(int dano){
-
+        Random rd = new Random();
+        int sorteio = rd.nextInt(100);
+        if (sorteio < this.chance) {
+            return 0;
+        }
         return dano;
     }
 }
