@@ -1,6 +1,6 @@
 public class INSS extends Inimigo{
     public INSS() {
-        super("INSS", 500, 200);
+        super("INSS", 500, 200, new Escudo(10));
     }
 
     @Override

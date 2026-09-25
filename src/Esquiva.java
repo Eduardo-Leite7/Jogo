@@ -4,6 +4,8 @@ public class Esquiva extends Defesa{
     private int chance;
 
     Esquiva(int chance){
+        if (chance < 0){ this.chance = 0;}
+        else if (chance > 100){this.chance = 100;}
         this.chance = chance;
     }
 

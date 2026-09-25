@@ -1,11 +1,18 @@
 public abstract class Inimigo extends Criatura{
 
     private int ataque;
-    private Defesa defesa = new Esquiva(50);
+    private Defesa defesa;
 
     public Inimigo(String nome, int vida, int ataque) {
         super(nome, vida);
         this.ataque = ataque;
+        this.defesa = new Defesa();
+    }
+
+    public Inimigo(String nome, int vida, int ataque, Defesa defesa) {
+        super(nome, vida);
+        this.ataque = ataque;
+        this.defesa = defesa;
     }
 
     @Override
