@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Jogador extends Criatura {
 
-    private int ataquePerto = 100;
+    private int ataquePerto = 50;
     private int ataqueLonge = 200;
     private Scanner sc = new Scanner(System.in);
 
