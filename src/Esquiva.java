@@ -7,6 +7,7 @@ public class Esquiva extends Defesa{
 
     @Override
     public int danoReduzido(int dano){
+
         return dano;
     }
 }
