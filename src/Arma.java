@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public abstract class Arma {
 
     private String nome;
@@ -10,11 +12,23 @@ public abstract class Arma {
         this.chance = chance;
     }
 
+    public Arma(String nome, int ataque) {
+        this(nome, ataque, 100);
+    }
+
     public void mensagem(){
-        System.out.println();
+        System.out.println(this.nome + " - dano: " +
+                            this.ataque + " - chance: " +
+                            this.chance + "%" );
     }
 
     public void fazAtaque(Criatura criatura){
-
+        Random rd = new Random();
+        int sorteio = rd.nextInt(100);
+        if (sorteio < this.chance){
+            criatura.tomaDano(this.ataque);
+        } else {
+            System.out.println("Errou!");
+        }
     }
 }
