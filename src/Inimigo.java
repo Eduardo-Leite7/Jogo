@@ -19,5 +19,4 @@ public abstract class Inimigo extends Criatura{
         super.tomaDano(danoReduzido);
     }
 
-
 }
