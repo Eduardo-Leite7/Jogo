@@ -5,10 +5,11 @@ public class Jogador extends Criatura {
 
     private Scanner sc = new Scanner(System.in);
 
-    Arma[] armas = {new Faca(), new ArcoFlecha(), new Porrete(), new Pistola()};
+    private Arma[] armas;
 
     public Jogador(String nome) {
         super(nome, 1000);
+        this.armas = armas;
     }
 
     @Override
