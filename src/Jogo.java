@@ -5,7 +5,7 @@ public class Jogo {
         Arma[] armas = {new Faca(), new ArcoFlecha(), new Porrete(), new Pistola()};
 
         Jogador jogador = new Jogador("Leitado jogos");
-        Inimigo inimigo = new INSS();
+        Inimigo inimigo = new IMPOSTO();
 
         System.out.println("----- COMEÇA A BATALHA!!! -----");
         System.out.println("###############################");
@@ -34,6 +34,9 @@ public class Jogo {
                 System.out.println(jogador.getNome() + " venceu");
                 break;
             }
+
+            jogador.upgrade();
+            inimigo.upgrade();
 
         }
     }

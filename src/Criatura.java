@@ -31,5 +31,13 @@ public abstract class Criatura {
         System.out.println(this.nome + " toma " + dano + " de dano.");
     }
 
+    public boolean vidaCritica( int valorCritico){
+        return this.vida < valorCritico;
+    }
+
+    public void upgrade(){
+
+    }
+
 
 }
