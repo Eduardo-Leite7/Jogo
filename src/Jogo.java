@@ -1,6 +1,9 @@
 public class Jogo {
 
     public static void main(String[] args) {
+
+        Arma[] armas = {new Faca(), new ArcoFlecha(), new Porrete(), new Pistola()};
+
         Jogador jogador = new Jogador("Leitado jogos");
         Inimigo inimigo = new INSS();
 
