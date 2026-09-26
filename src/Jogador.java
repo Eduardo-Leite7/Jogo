@@ -5,6 +5,8 @@ public class Jogador extends Criatura {
 
     private Scanner sc = new Scanner(System.in);
 
+    Arma[] armas = {new Faca(), new ArcoFlecha()};
+
     public Jogador(String nome) {
         super(nome, 1000);
     }
@@ -21,30 +23,19 @@ public class Jogador extends Criatura {
 
     @Override
     public void fazAtaque(Criatura criatura) {
-        System.out.println("Escolha sua arma: ");
-        System.out.println("1) Faca - dano: " + this.ataquePerto);
-        System.out.println(
-                "2) Arco e Flecha  - dano: " + this.ataqueLonge + " - chance 50%");
-        System.out.print("Sua escolha: ");
-
+        System.out.println("Escolha sua arma");
+        int n = 1;
+        for(Arma arma : armas) {
+            System.out.println(n + ") ");
+            arma.mensagem();
+            n++;
+        }
         int escolha = sc.nextInt();
-
-        while (escolha < 1 || escolha > 2) {
+        while (escolha < 1 || escolha > n - 1) {
             System.out.println("Número inválido. Digite novamente: ");
             escolha = sc.nextInt();
         }
 
-        if (escolha == 1) {
-            criatura.tomaDano(this.ataquePerto);
-        } else {
-            Random rd = new Random();
-            int sorteio = rd.nextInt(100); // 0 a 99
-            if (sorteio < 50) {
-                criatura.tomaDano(this.ataqueLonge);
-                System.out.println("Acertou o tiro de longe!");
-            } else {
-                System.out.println("Errou!!!!");
-            }
-        }
+        armas[escolha-1].fazAtaque(criatura);
     }
 }
