@@ -5,7 +5,7 @@ public class Jogador extends Criatura {
 
     private Scanner sc = new Scanner(System.in);
 
-    Arma[] armas = {new Faca(), new ArcoFlecha()};
+    Arma[] armas = {new Faca(), new ArcoFlecha(), new Porrete(), new Pistola()};
 
     public Jogador(String nome) {
         super(nome, 1000);

@@ -1,5 +1,6 @@
 public class Pistola extends Arma{
-    public Pistola(String nome, int ataque){
+
+    public Pistola(){
         super("Pistola", 150, 70);
     }
 }

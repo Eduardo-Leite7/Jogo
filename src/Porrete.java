@@ -1,6 +1,6 @@
 public class Porrete extends Arma{
 
-    public Porrete{
+    public Porrete(){
         super("Porrete", 60, 90);
     }
 }
